@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Система Фильмов</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <h1>Менеджмент Фильмов</h1>
+    <div>
+        <label for="title">Название Фильма:</label>
+        <input type="text" id="title" placeholder="Название фильма">
+        <label for="genre">Жанр:</label>
+        <input type="text" id="genre" placeholder="Название жанра">
+        <label for="year">Год Выпуска:</label>
+        <input type="number" id="year" placeholder="Год">
+        <label for="rating">Оценка:</label>
+        <input type="text" id="rating">
+        <button onclick="addFilm()">Добавить Фильм!</button>
+    </div>
+
+    <div class="modal" id="modal-one" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-body">
+                <!--Содержимое модального окна-->
+                <div class="window">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">X</button>
+                    <label for="modal-title" class="modal-title">Название фильма: </label>
+                    <input type="title-input" id="title" placeholder="Название фильма">
+                    <label for="modal-genre" class="modal-genre">Жанр: </label>
+                    <input type="genre-input" id="genre" placeholder="Жанр">
+                    <label for="modal-year" class="modal-year">Год Выпуска: </label>
+                    <input type="year-input" id="year" placeholder="Год">
+                    <label for="modal-rating" class="modal-rating">Рейтинг: </label>
+                    <input type="rating-input" id="rating" placeholder="Рейтинг">
+                    <button type="button" class="btn-add" data-bs-dismiss="modal">Изменить</button>
+
+                </div>
+            </div>
+        </div> 
+    </div>
+
+    <ul id="film-list"></ul>
+    <script src="scripts/script.js"></script>
+</body>
+</html>
+
+
+
